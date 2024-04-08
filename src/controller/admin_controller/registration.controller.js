@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 
-exports.adminRegistration = async (req, res) => {
+const adminRegistration = async (req, res) => {
     const { email, password } = req.body;
     try {
         if (!email) {
@@ -41,5 +41,6 @@ exports.adminRegistration = async (req, res) => {
     }
 };
 
+module.exports = { adminRegistration }
 
 
