@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const Token = require("../../services/genrateToken")
 
 
-exports.Admin_login = async (req, res) => {
+const Admin_login = async (req, res) => {
 
     try {
         if (!req.body.email) {
@@ -57,5 +57,6 @@ exports.Admin_login = async (req, res) => {
     }
 }
 
+module.exports = { Admin_login }
 
 
